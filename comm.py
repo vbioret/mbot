@@ -7,7 +7,7 @@ devices = filter1.get_devices()
 
 if devices:
     device = devices[0]
-    print "success"
+    print('success')
 
 device.open()
 out_report = device.find_output_reports()[0]
@@ -19,6 +19,6 @@ my_buffer[2]=0x35
 my_buffer[3]=0x0A
 print(my_buffer)
 out_report.set_raw_data(my_buffer)
-print out_report
+print(out_report)
 out_report.send(my_buffer)
 device.close()
