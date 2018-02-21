@@ -36,8 +36,6 @@ String msg;
 MeSerial se;
 MeRGBLed rgbled_7(7, 7 == 7 ? 2 : 4);
 
-
-
 void setup() {
   Serial.begin(115200);
 
@@ -57,7 +55,7 @@ while (se.available()) {
       if(msg[0]=='1'){
       rgbled_7.setColor(0, 255, 255, 255);
       rgbled_7.show();  
-      move(1,100);
+      move(1,255);
       }
       if(msg[0]=='2'){
         rgbled_7.setColor(0,50, 0,0);
@@ -70,7 +68,7 @@ while (se.available()) {
         move(3,100) ;
       }  
       if(msg[0]=='4'){
-        rgbled_7.setColor(0,50, 0,0);
+        rgbled_7.setColor(0,0, 50,0);
         rgbled_7.show(); 
         move(4,100) ;
       }  
